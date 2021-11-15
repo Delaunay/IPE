@@ -1,0 +1,13 @@
+#
+#   If people don't build test don't add gtest
+#
+IF(BUILD_TESTING)
+    ADD_SUBDIRECTORY(gtest)
+ENDIF(BUILD_TESTING)
+
+IF (BUILD_BENCHMARK)
+    ADD_SUBDIRECTORY(hayai)
+    INCLUDE_DIRECTORIES(hayai/src)
+ENDIF(BUILD_BENCHMARK)
+
+ADD_SUBDIRECTORY(spdlog)
