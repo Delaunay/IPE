@@ -10,7 +10,7 @@ int main() {
     info("version date  : {}", _DATE);
     info("version branch: {}", _BRANCH);
 
-    ipe::init_ipe("status", 5);
+    ipe::init_ffa("status", 5, 5);
     ipe::Worker w(4, "status", 5);
 
     std::cout << w.rendezvous(1) << "\n";
